@@ -19,6 +19,19 @@ export const CartReducer = (storeData, action) => {
             newStore.cartPrice += p.price * q;
             return newStore;
         
+        case ActionTypes.CART_UPDATE:
+            newStore.cart = newStore.cart.map(item => {
+                if (item.product.id === action.payload.product.id) {
+                    const diff = action.payload.quantity - item.quantity;
+                    newStore.cartItems += diff;
+                    newStore.cartPrice += (item.product.price * diff);
+                    return action.payload
+                } else {
+                    return item;
+                }
+            });
+            return newStore;
+
         case ActionTypes.CART_REMOVE:
             let selection = newStore.cart.find(item => item.product.id === action.payload.id);
             newStore.cartItems -= selection.quantity;
