@@ -1,3 +1,5 @@
+Sportstore App in progress following along with Pro React 16 published by APress.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
