@@ -20,7 +20,7 @@ export class CartSummary extends Component {
         return <div className="float-right">
             <small>
                 { this.getSummary() }
-                <Link classname={ this.getLinkClasses() } to="/shop/cart">
+                <Link className={ this.getLinkClasses() } to="/shop/cart">
                     <i className="fa fa-shopping-cart"></i>
                 </Link>
             </small>

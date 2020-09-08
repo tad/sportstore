@@ -8,10 +8,20 @@ export const addToCart = (product, quantity) => ({
     }
 });
 
-export const updateCartQuantity = (product, quantity) => ({
-    type: ActionTypes.CART_UPDATE,
-    payload: { product, quantity }
-});
+// export const updateCartQuantity = (product, quantity) => ({
+//     type: ActionTypes.CART_UPDATE,
+//     payload: { product, quantity }
+// });
+
+export const updateCartQuantity = (product, quantity) => {
+    console.log("Hello");
+    console.log(product);
+    console.log(quantity);
+    return {
+        type: ActionTypes.CART_UPDATE,
+        payload: { product, quantity }
+    }
+}
 
 export const removeFromCart = (product) => ({
     type: ActionTypes.CART_REMOVE,
