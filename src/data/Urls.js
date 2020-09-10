@@ -1,7 +1,8 @@
 import { DataTypes } from "./Types";
 
 const protocol = "http";
-const hostname = "ec2-54-185-17-95.us-west-2.compute.amazonaws.com";
+// const awshostname = "ec2-54-185-17-95.us-west-2.compute.amazonaws.com";
+const hostname = "localhost";
 const port = 3500;
 
 export const RestUrls = {
